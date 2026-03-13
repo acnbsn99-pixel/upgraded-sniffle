@@ -1,0 +1,1900 @@
+```
+[
+  {
+    "id": 1,
+    "topic": "Reinforcement Learning from Human Feedback (RLHF)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1706.03741",
+        "title": "Deep Reinforcement Learning from Human Preferences"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2009.01325",
+        "title": "Learning to summarize from human feedback"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2203.02155",
+        "title": "InstructGPT / Training language models to follow instructions"
+      }
+    ],
+    "prompt": "Please generate a technical presentation on the alignment of LLMs using human feedback. Compare the methodological evolution from the initial specific-task reward modeling (2017) to the generalized PPO approach used in InstructGPT. Specifically, analyze how the 'Reward Model' architecture and the 'Policy Optimization' phase differ across these papers to reduce toxicity and hallucination."
+  },
+  {
+    "id": 2,
+    "topic": "Parameter-Efficient Fine-Tuning (PEFT)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1902.00751",
+        "title": "Adapter Modules"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2101.00190",
+        "title": "Prefix-Tuning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.09685",
+        "title": "LoRA: Low-Rank Adaptation"
+      }
+    ],
+    "prompt": "Create a comparative analysis slide deck on efficient adaptation methods for large models. Focus on the architectural injection points: contrast how Adapter modules insert layers between Transformer sub-layers versus how Prefix-Tuning optimizes continuous prompts, and finally, how LoRA decomposes weight updates into low-rank matrices. Include a table comparing trainable parameter counts vs. performance retention."
+  },
+  {
+    "id": 3,
+    "topic": "Retrieval-Augmented Generation (RAG)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2002.08909",
+        "title": "REALM: Retrieval-Augmented Language Model Pre-Training"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2005.11401",
+        "title": "RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2112.04488",
+        "title": "RETRO: Improving language models by retrieving from trillions of tokens"
+      }
+    ],
+    "prompt": "Based on these three seminal papers, generate a presentation on the integration of non-parametric memory (retrieval) into LMs. Analyze the architectural differences: REALMs approach to pre-training the retriever, RAGs end-to-end marginalization over documents, and RETROs use of chunked cross-attention for scaling to trillion-token databases. Visualize the data flow during the inference step for each."
+  },
+  {
+    "id": 4,
+    "topic": "Mixture of Experts (MoE)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1701.06538",
+        "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2101.03961",
+        "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.04088",
+        "title": "Mixtral of Experts"
+      }
+    ],
+    "prompt": "Generate a technical review on Sparse Mixture of Experts (MoE) architectures. Focus on the Routing Mechanism evolution: Compare the original noisy top-k gating (2017) with the simplified routing in Switch Transformers to prevent training instability, and finally, analyze how Mixtral implements active experts per token to balance inference speed with model capacity."
+  },
+  {
+    "id": 5,
+    "topic": "Vision-Language Models (Multimodal)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2103.00020",
+        "title": "CLIP: Learning Transferable Visual Models From Natural Language Supervision"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2010.11929",
+        "title": "ViT: An Image is Worth 16x16 Words"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.08485",
+        "title": "LLaVA: Visual Instruction Tuning"
+      }
+    ],
+    "prompt": "Produce a presentation on the convergence of Vision and Language. Start with the architectural shift from CNNs to Transformers (ViT), then analyze how CLIP aligned these two modalities using contrastive learning. Finally, explain how LLaVA utilizes a projection layer to connect a pre-trained vision encoder to an LLM, enabling complex visual reasoning."
+  },
+  {
+    "id": 6,
+    "topic": "Efficient Attention (Long Context)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2004.05150",
+        "title": "Longformer: The Long-Document Transformer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2001.04451",
+        "title": "Reformer: The Efficient Transformer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2309.17453",
+        "title": "Ring Attention with Blockwise Transformers"
+      }
+    ],
+    "prompt": "Summarize the techniques used to break the quadratic complexity of self-attention. Contrast the sparse attention patterns used in Longformer (sliding window + global attention) against the LSH (Locality Sensitive Hashing) approach in Reformer. Conclude with the Ring Attention mechanism, explaining how it enables training on context lengths exceeding 1 million tokens through distributed computing."
+  },
+  {
+    "id": 7,
+    "topic": "Reasoning & Chain-of-Thought (Advanced)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2205.11916",
+        "title": "Zero-Shot Coordinators / \"Lets Think Step by Step\""
+      },
+      {
+        "url": "https://arxiv.org/pdf/2203.11171",
+        "title": "Self-Consistency Improves Chain of Thought Reasoning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.10601",
+        "title": "Tree of Thoughts: Deliberate Problem Solving"
+      }
+    ],
+    "prompt": "Analyze the evolution of prompting strategies for complex reasoning. Compare the standard Chain-of-Thought (CoT) approach with Self-Consistency (majority voting), and then detail the Tree of Thoughts (ToT) framework. Specifically, visualize how ToT implements search algorithms (BFS/DFS) over the LMs thought process to enable lookahead and backtracking."
+  },
+  {
+    "id": 8,
+    "topic": "Diffusion Models (Image Generation)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2006.11239",
+        "title": "DDPM: Denoising Diffusion Probabilistic Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2112.10752",
+        "title": "Latent Diffusion Models / Stable Diffusion"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2205.11487",
+        "title": "Imagen: Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding"
+      }
+    ],
+    "prompt": "Generate a technical deep-dive into the rise of Diffusion Models. Explain the mathematical foundation of the forward/reverse diffusion process (DDPM). Crucially, contrast Latent Diffusion (compressing to latent space for efficiency) with Imagen (pixel-space diffusion using a massive LLM encoder), evaluating the trade-off between computational cost and semantic adherence."
+  },
+  {
+    "id": 9,
+    "topic": "Code Generation LLMs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2107.03374",
+        "title": "Codex: Evaluating Large Language Models Trained on Code"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2202.01771",
+        "title": "AlphaCode: Competition-Level Code Generation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.12950",
+        "title": "Code Llama: Open Foundation Models for Code"
+      }
+    ],
+    "prompt": "Create a comparative study on Code-Specific LLMs. Analyze the data curation strategies: How did Codex leverage GitHub data? How did AlphaCode introduce clustering and filtering to solve competitive programming problems? Finally, detail Code Llamas in-filling objective and its long-context handling for repository-level understanding."
+  },
+  {
+    "id": 10,
+    "topic": "Synthetic Data & Distillation",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2212.10560",
+        "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.11644",
+        "title": "Textbooks Are All You Need - phi-1"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.11206",
+        "title": "LIMA: Less Is More for Alignment"
+      }
+    ],
+    "prompt": "Examine the paradigm shift from \"Big Data\" to \"Quality Data\". Discuss the methodology of Self-Instruct for bootstrapping training data. Compare this with the Textbooks Are All You Need paper, which argues that small models trained on synthetic, textbook-quality data can outperform larger models. Incorporate the findings from LIMA regarding the Surface Form Hypothesis."
+  },
+  {
+    "id": 11,
+    "topic": "Tool Use & APIs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2302.04761",
+        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.17580",
+        "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.15334",
+        "title": "Gorilla: Large Language Model Connected with Massive APIs"
+      }
+    ],
+    "prompt": "Generate a presentation on the mechanisms of Tool Learning. Contrast Toolformers self-supervised API call insertion with Gorillas retriever-aware training for massive API selection. Discuss the architectural implications of having the model predict API arguments versus simply routing tasks to other models (as in HuggingGPT)."
+  },
+  {
+    "id": 12,
+    "topic": "Hallucination & Factuality",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2109.07958",
+        "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.08896",
+        "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.14251",
+        "title": "DoLa: Decoding by Contrasting Layers"
+      }
+    ],
+    "prompt": "Create a slide deck focused on the detection and mitigation of Hallucination. Explain the TruthfulQA benchmark challenges. Then, compare the detection methods: SelfCheckGPTs stochastic sampling consistency versus DoLas method of contrasting probability distributions between early and late layers of the Transformer."
+  },
+  {
+    "id": 13,
+    "topic": "Quantization (Model Compression)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2210.17323",
+        "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.14314",
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.00978",
+        "title": "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression"
+      }
+    ],
+    "prompt": "Analyze the mathematical techniques for running LLMs on consumer hardware. Compare GPTQs second-order information (Hessian inverse) approach for weight updates with QLoRAs NormalFloat4 data type and double quantization. Discuss the trade-offs between inference speed and perplexity degradation presented in these papers."
+  },
+  {
+    "id": 14,
+    "topic": "Interpretability (Mechanistic)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2211.00593",
+        "title": "Interpretability in the Wild: A Circuit for Indirect Object Identification in GPT-2"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.04648",
+        "title": "Linearity of Relation Decoding in Transformer Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2403.09629",
+        "title": "Monosemanticity: Extracting Interpretable Features from Claude 3 - Anthropic Paper equivalent"
+      }
+    ],
+    "prompt": "Generate a deep technical review on Mechanistic Interpretability. Focus on the concept of Circuits and Induction Heads found in the IOI paper. Contrast this with the Linear Representation Hypothesis, and explain the recent efforts to decompose neurons into interpretable features using Sparse Autoencoders (SAEs)."
+  },
+  {
+    "id": 15,
+    "topic": "Audio & Speech (Multimodal)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2006.11477",
+        "title": "Wav2Vec 2.0: A Framework for Self-Supervised Learning of Speech Representations"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2212.04356",
+        "title": "Whisper: Robust Speech Recognition via Large-Scale Weak Supervision"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2209.03143",
+        "title": "AudioLM: a Language Modeling Approach to Audio Generation"
+      }
+    ],
+    "prompt": "Create a presentation on the application of Transformer architectures to Audio. Contrast Wav2Vec 2.0s contrastive loss on masked latent speech representations with Whispers massive weakly-supervised sequence-to-sequence training. Finally, explain how AudioLM treats audio generation as a hierarchical language modeling task using semantic and acoustic tokens."
+  },
+  {
+    "id": 16,
+    "topic": "Prompt Optimization (DSPy & OPRO)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2211.01910",
+        "title": "Large Language Models Are Human-Level Prompt Engineers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2309.03409",
+        "title": "OPRO: Large Language Models as Optimizers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.03714",
+        "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+      }
+    ],
+    "prompt": "Analyze the shift from manual Prompt Engineering to algorithmic Prompt Optimization. Compare OPROs method of using the LLM itself to optimize the prompt through an iterative trajectory with DSPys programming model, which treats prompts as compile-time parameters to be optimized via teleprompters. Include a workflow diagram for each."
+  },
+  {
+    "id": 17,
+    "topic": "Constitutional AI & Safety",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2212.08073",
+        "title": "Constitutional AI: Harmlessness from AI Feedback"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2202.03286",
+        "title": "Red Teaming Language Models with Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2307.02483",
+        "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+      }
+    ],
+    "prompt": "Generate a slide deck on AI Safety and Alignment techniques. Detail the Constitutional AI workflow: Supervised Learning (SL) followed by Reinforcement Learning from AI Feedback (RLAIF). Contrast this with the findings on adversarial attacks, explaining why aligned models remain vulnerable to suffix-based jailbreaks."
+  },
+  {
+    "id": 18,
+    "topic": "Video Generation",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2209.14792",
+        "title": "Make-A-Video: Text-to-Video Generation without Text-Video Data"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.08818",
+        "title": "VideoLDM / Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.03048",
+        "title": "Lumiere: A Space-Time Diffusion Model for Video Generation"
+      }
+    ],
+    "prompt": "Produce a comparative analysis of Text-to-Video architectures. Focus on the handling of temporal consistency. Contrast Make-A-Videos pseudo-3D convolution approach with Lumieres Space-Time U-Net architecture. Explain how each model solves the flickering problem inherent in frame-by-frame generation."
+  },
+  {
+    "id": 19,
+    "topic": "Mathematical Reasoning",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2110.14168",
+        "title": "GSM8K: Training Verifiers to Solve Math Word Problems"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2206.14858",
+        "title": "Minerva: Solving Quantitative Reasoning Problems with Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.05398",
+        "title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models"
+      }
+    ],
+    "prompt": "Generate a presentation on the capabilities of LLMs in quantitative reasoning. Compare Minervas approach (fine-tuning on arXiv technical papers) with the Verifier approach used in GSM8K. Furthermore, analyze how LeanDojo integrates LLMs with formal theorem provers to move beyond approximation to rigorous mathematical proofs."
+  },
+  {
+    "id": 20,
+    "topic": "State Space Models (The Transformer Alternatives)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2111.00396",
+        "title": "S4: Efficiently Modeling Long Sequences with Structured State Spaces"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2312.00752",
+        "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.06118",
+        "title": "RWKV: Reinventing RNNs for the Transformer Era"
+      }
+    ],
+    "prompt": "Create a technical report on post-Transformer architectures. Specifically, analyze the Selection Mechanism in Mamba that allows it to compress context efficiently compared to the Transformers KV-Cache. Contrast Mambas hardware-aware parallel scan algorithm with RWKVs approach to parallelizing RNN training. Include a complexity comparison (Time vs Space) table."
+  },
+  {
+    "id": 21,
+    "topic": "Scaling Laws (The Physics of AI)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2001.08361",
+        "title": "Kaplan et al., 2020: Scaling Laws for Neural Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2203.15556",
+        "title": "Chinchilla / Hoffmann et al., 2022: Training Compute-Optimal Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.14891",
+        "title": "U-PaLM: Scaling Language Modeling with PaLM"
+      }
+    ],
+    "prompt": "Please generate a comparative analysis of Neural Scaling Laws. Critically analyze the shift from the Kaplan laws (which prioritized parameter count) to the Chinchilla laws (which prioritize token count). Discuss the implications of compute-optimal training frontiers and how U-PaLM introduces multi-objective scaling to the equation."
+  },
+  {
+    "id": 22,
+    "topic": "Direct Preference Optimization (DPO vs RLHF)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2305.18290",
+        "title": "DPO: Direct Preference Optimization"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.12036",
+        "title": "IPO: A General Theoretical Paradigm for Understanding RLHF"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2402.01306",
+        "title": "KTO: Model Alignment as Prospect Theoretic Optimization"
+      }
+    ],
+    "prompt": "Create a technical presentation on the shift away from PPO-based RLHF. Explain the mathematical derivation of DPO, specifically how it solves the constrained reward maximization problem without an explicit reward model. Contrast this with IPO (which adds a regularization term for stability) and KTO (which removes the need for paired preference data entirely)."
+  },
+  {
+    "id": 23,
+    "topic": "Embodied AI (Robotics)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2204.01691",
+        "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances / SayCan"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.03378",
+        "title": "PaLM-E: An Embodied Multimodal Language Model"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2307.15818",
+        "title": "RT-2: Vision-Language-Action Models"
+      }
+    ],
+    "prompt": "Analyze the integration of LLMs into robotic control systems. Focus on the concept of Grounding: How does SayCan value functions to assess feasibility? Contrast this with PaLM-E and RT-2, which tokenize robot actions directly into the language models vocabulary, treating motor control as a sequence generation task."
+  },
+  {
+    "id": 24,
+    "topic": "Speculative Decoding (Inference Speed)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2211.17192",
+        "title": "Fast Inference from Transformers via Speculative Decoding"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2302.01318",
+        "title": "Accelerating Large Language Model Decoding with Speculative Sampling"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.10774",
+        "title": "Medusa: Simple LLM Inference Acceleration Framework"
+      }
+    ],
+    "prompt": "Generate a technical report on Speculative Decoding algorithms. Explain the Draft-Verify paradigm: how a small draft model generates tokens that are verified in parallel by the large target model. Contrast standard speculative sampling with the Medusa architecture, which adds extra heads to predict multiple future tokens simultaneously without a separate draft model."
+  },
+  {
+    "id": 25,
+    "topic": "3D Generative Models",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2209.14988",
+        "title": "DreamFusion: Text-to-3D using 2D Diffusion"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.10440",
+        "title": "Magic3D: High-Resolution Text-to-3D Content Creation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2212.08751",
+        "title": "Point-E: A System for Generating 3D Point Clouds from Complex Prompts"
+      }
+    ],
+    "prompt": "Produce a comparative study on Text-to-3D synthesis. Analyze the Score Distillation Sampling (SDS) loss function introduced in DreamFusion and how it leverages 2D diffusion priors. Contrast this optimization-based approach (NeRF/Mesh) with Point-Es feed-forward approach, which generates 3D point clouds directly using a diffusion transformer."
+  },
+  {
+    "id": 26,
+    "topic": "Positional Embeddings (Extrapolation)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2104.09864",
+        "title": "RoPE: Rotary Position Embedding"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2108.12409",
+        "title": "ALiBi: Train Short, Test Long"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2309.00071",
+        "title": "YaRN: Efficient Context Window Extension of Llama 2"
+      }
+    ],
+    "prompt": "Create a deep-dive presentation on Transformer Positional Encodings. Specifically, explain the mathematical properties of Rotary Embeddings (RoPE) and why they allow for relative position attention. Compare RoPE with ALiBi’s linear bias approach for extrapolation, and finally, analyze how YaRN modifies the RoPE frequency base to extend context windows without full re-training."
+  },
+  {
+    "id": 27,
+    "topic": "Medical & Bio-LLMs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2212.13138",
+        "title": "Large Language Models Encode Clinical Knowledge / Med-PaLM"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.10341",
+        "title": "BioGPT: Generative Pre-trained Transformer for Biomedical Text Generation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2107.03135",
+        "title": "Highly Accurate Protein Structure Prediction with AlphaFold"
+      }
+    ],
+    "prompt": "Generate a presentation on the adaptation of Transformers for the Biomedical domain. Contrast the domain-specific pre-training strategy of BioGPT with the instruction-tuning approach of Med-PaLM. Include a section on AlphaFolds Evoformer block to illustrate how the attention mechanism was modified to handle Multiple Sequence Alignments (MSA) and 3D spatial constraints."
+  },
+  {
+    "id": 28,
+    "topic": "Watermarking & Detection",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2301.10226",
+        "title": "A Watermark for Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.11305",
+        "title": "DetectGPT: Zero-Shot Machine-Generated Text Detection"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.08922",
+        "title": "Stable Signature: Rooting Watermarks in Latent Diffusion Models"
+      }
+    ],
+    "prompt": "Analyze the technical methods for AI content provenance. Compare the Green-Red List token partitioning strategy used in Kirchenbauer’s Watermarking paper against the curvature-based detection method of DetectGPT. Discuss the robustness of these methods against paraphrase attacks and their impact on text quality (perplexity)."
+  },
+  {
+    "id": 29,
+    "topic": "Small Language Models (SLMs)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2305.07759",
+        "title": "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.11644",
+        "title": "Phi-1: Textbooks Are All You Need - Repeated for emphasis on SLM"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.02385",
+        "title": "TinyLlama: An Open-Source Small Language Model"
+      }
+    ],
+    "prompt": "Generate a report on the Small Model revolution. Focus on the hypothesis that data quality matters more than parameter count for reasoning. Analyze the TinyStories experiment: how synthetic, simplified vocabulary data allows extremely small models (<30M params) to acquire grammar and coherence. Compare this with TinyLlamas approach of training a small model for more epochs (over-training) on standard datasets."
+  },
+  {
+    "id": 30,
+    "topic": "Vector Databases & Embeddings",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1908.10084",
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2212.03533",
+        "title": "Text and Code Embeddings by Contrastive Pre-Training / OpenAI Embeddings"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2402.03216",
+        "title": "BGE / C-Pack: Packaged Resources To Advance General Chinese Embedding"
+      }
+    ],
+    "prompt": "Create a technical overview of Semantic Embedding models. Explain the Siamese Network architecture used in S-BERT for generating fixed-size vectors. Contrast this with modern Contrastive Learning approaches (InfoNCE loss) used in OpenAIs embeddings. Discuss the importance of Matryoshka Representation Learning (MRL) for creating flexible-dimension embeddings."
+  },
+  {
+    "id": 31,
+    "topic": "Continual Learning (Forgetting)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1612.00796",
+        "title": "Overcoming Catastrophic Forgetting in Neural Networks / EWC"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2205.13380",
+        "title": "Continual Learning with Transformer Adapters"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.05388",
+        "title": "Dont Stop Pretraining: Adapt Language Models to Domains and Tasks"
+      }
+    ],
+    "prompt": "Analyze the challenge of Catastrophic Forgetting in LLMs. Compare the regularization-based approach of EWC (Elastic Weight Consolidation) with architecture-based approaches like Adapter modules. Evaluate the trade-offs discussed in Dont Stop Pretraining regarding the balance between domain adaptation and retaining general-purpose capabilities."
+  },
+  {
+    "id": 32,
+    "topic": "Jailbreaking (Red Teaming Attacks)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2307.15043",
+        "title": "Universal and Transferable Adversarial Attacks / GCG"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.04451",
+        "title": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned LLMs"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.08419",
+        "title": "PAIR: Prompt Automatic Iterative Refinement"
+      }
+    ],
+    "prompt": "Generate a security analysis presentation on LLM Jailbreaking. Detail the gradient-based optimization method used in the GCG attack (Greedy Coordinate Gradient) to find adversarial suffixes. Contrast this with the genetic algorithm/evolutionary strategy used in AutoDAN and PAIR to automatically evolve prompts that bypass safety filters without access to model weights."
+  },
+  {
+    "id": 33,
+    "topic": "Text-to-Audio (Music & Sound)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2301.11325",
+        "title": "MusicLM: Generating Music From Text"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.05284",
+        "title": "MusicGen: Simple and Controllable Music Generation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.11776",
+        "title": "AudioLDM: Text-to-Audio Generation with Latent Diffusion Models"
+      }
+    ],
+    "prompt": "Produce a comparative analysis of Neural Audio Synthesis. Contrast the hierarchical sequence-to-sequence modeling of MusicLM (semantic + acoustic tokens) with the single-stage language model approach of MusicGen (interleaving codebooks). Finally, compare these autoregressive approaches with AudioLDM, which applies latent diffusion to audio spectrograms."
+  },
+  {
+    "id": 34,
+    "topic": "Multilingual LLMs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1911.02116",
+        "title": "XLM-R: Unsupervised Cross-lingual Representation Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.05100",
+        "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2403.00392",
+        "title": "SeaLLMs: Large Language Models for Southeast Asia"
+      }
+    ],
+    "prompt": "Generate a presentation on the architectural considerations for Multilingual LLMs. Discuss the Curse of Multilinguality (capacity dilution) analyzed in the XLM-R paper. Compare the vocabulary construction and pre-training data balancing strategies used in BLOOM versus region-specific models like SeaLLMs. Explain how tokenization efficiency varies across different scripts."
+  },
+  {
+    "id": 35,
+    "topic": "Knowledge Editing",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2202.05262",
+        "title": "Locating and Editing Factual Associations in GPT / ROME"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.07229",
+        "title": "Mass-Editing Memory in a Transformer / MEMIT"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.14795",
+        "title": "Editing Models with Task Arithmetic"
+      }
+    ],
+    "prompt": "Create a technical deep-dive on Model Editing techniques. Explain the causal tracing method used in ROME to identify specific MLP layers storing factual knowledge. Contrast ROME (single edit) with MEMIT (mass editing), detailing how they manipulate the feed-forward weights. Compare these weight-modification methods with Task Arithmetic, which edits behavior by adding/subtracting fine-tuned task vectors."
+  },
+  {
+    "id": 36,
+    "topic": "Neural Architecture Search (NAS)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1611.01578",
+        "title": "Neural Architecture Search with Reinforcement Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1901.11117",
+        "title": "The Evolved Transformer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2008.06808",
+        "title": "AutoFormer: Searching Transformers for Visual Recognition"
+      }
+    ],
+    "prompt": "Analyze the evolution of automated architecture design. Discuss how The Evolved Transformer used evolutionary algorithms to discover better attention patterns (like wide convolutions) compared to the manual design of the original Transformer. Explain the search space definition and efficiency metrics used in these papers."
+  },
+  {
+    "id": 37,
+    "topic": "Knowledge Distillation (Model Compression)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1503.02531",
+        "title": "Distilling the Knowledge in a Neural Network / Hinton"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1910.01108",
+        "title": "DistilBERT: A Distilled Version of BERT"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.08543",
+        "title": "Lion: Adversarial Distillation of Closed-Source Large Language Models"
+      }
+    ],
+    "prompt": "Generate a presentation on Knowledge Distillation (KD) techniques for Transformers. Review the classic Soft Targets loss function (Hinton). Then, analyze how DistilBERT successfully compressed BERT by 40% using Triple Loss (Language Modeling, Distillation, and Cosine-Distance losses). Contrast this with Lion, which transfers knowledge via adversarial training rather than simple KL-divergence."
+  },
+  {
+    "id": 38,
+    "topic": "Long-Form Video Understanding",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2104.00285",
+        "title": "VideoBERT: A Joint Model for Video and Language Representation Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.13230",
+        "title": "Merlot: Multimodal Neural Script Knowledge Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2312.00849",
+        "title": "VideoPoet: A Large Language Model for Zero-Shot Video Generation"
+      }
+    ],
+    "prompt": "Create a slide deck on Temporal Modeling in multimodal transformers. Explain how VideoBERT discretizes video into visual tokens (clusters) to apply BERT-style training. Contrast this with VideoPoet, which uses a decoder-only architecture to handle both video generation and understanding within a single autoregressive framework."
+  },
+  {
+    "id": 39,
+    "topic": "Graph Neural Networks (GNNs) with LLMs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2305.10037",
+        "title": "Graph-ToolFormer: To Empower LLMs with Graph Reasoning Ability"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.11503",
+        "title": "GraphRAG: Retrieving Knowledge from Knowledge Graphs"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.05406",
+        "title": "GraphText: Graph Reasoning in Text Space"
+      }
+    ],
+    "prompt": "Analyze the intersection of Structured Data (Graphs) and Unstructured Data (Text). Discuss how GraphRAG improves upon standard RAG by retrieving sub-graphs rather than isolated text chunks. Compare this with methods that serialize graph structures into text prompts (GraphText) versus methods that equip LLMs with specific GNN API tools (Graph-ToolFormer)."
+  },
+  {
+    "id": 40,
+    "topic": "Time Series Foundation Models",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2302.00861",
+        "title": "Time-LLM: Time Series Forecasting by Reprogramming Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.03589",
+        "title": "TimeGPT-1"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.10196",
+        "title": "Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting"
+      }
+    ],
+    "prompt": "Generate a technical report on applying Transformer architectures to Time Series. Critically analyze the Patching technique used to tokenize continuous time-series data. Compare Time-LLM (which freezes an existing NLP model and reprograms it) with Lag-Llama (which is trained from scratch on massive time-series datasets)."
+  },
+  { # TODO CONTINUE HERE
+    "id": 41,
+    "topic": "Efficient Attention & Memory (Hardware Optimization)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2205.14135",
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2309.06180",
+        "title": "PagedAttention / vLLM: Efficient Memory Management for Large Language Model Serving"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1911.02150",
+        "title": "Multi-Query Attention: Fast Decoding with Shared Key-Value Heads"
+      }
+    ],
+    "prompt": "Generate a technical presentation on hardware-aware Transformer optimizations. Focus on the IO-complexity analysis: Explain how FlashAttention reduces HBM (High Bandwidth Memory) accesses through tiling. Contrast this with PagedAttention, which solves the memory fragmentation problem in the KV-cache, and Multi-Query Attention (MQA), which reduces memory bandwidth pressure during decoding by sharing keys/values across heads."
+  },
+  {
+    "id": 42,
+    "topic": "Self-Supervised Learning (Vision)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2002.05709",
+        "title": "SimCLR: A Simple Framework for Contrastive Learning of Visual Representations"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2111.06377",
+        "title": "MAE: Masked Autoencoders Are Scalable Vision Learners"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2104.14294",
+        "title": "DINO: Emerging Properties in Self-Supervised Vision Transformers"
+      }
+    ],
+    "prompt": "Create a comparative study on Self-Supervised Learning (SSL) paradigms in computer vision. Contrast the Contrastive Learning approach of SimCLR (maximizing agreement between augmented views) with the Generative approach of MAE (reconstructing masked pixels). Discuss the emergent segmentation properties found in DINO’s attention maps."
+  },
+  {
+    "id": 43,
+    "topic": "In-Context Learning (Theoretical Mechanisms)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2108.04152",
+        "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.15661",
+        "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2212.10559",
+        "title": "Transformers learn in-context by gradient descent / Von Neumann Transformers"
+      }
+    ],
+    "prompt": "Generate a theoretical analysis of In-Context Learning (ICL). Critically evaluate the hypothesis that ICL performs implicit gradient descent within the forward pass. Discuss the findings that ground truth labels in demonstrations matter less than the format and distribution, challenging the assumption that the model is truly learning the task from the prompt."
+  },
+  {
+    "id": 44,
+    "topic": "Offline Reinforcement Learning (Decision Transformers)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2106.01345",
+        "title": "Decision Transformer: Reinforcement Learning via Sequence Modeling"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.02039",
+        "title": "Trajectory Transformer: Offline Reinforcement Learning as One Big Sequence Modeling Problem"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2006.04779",
+        "title": "Conservative Q-Learning for Offline Reinforcement Learning"
+      }
+    ],
+    "prompt": "Produce a presentation on the convergence of RL and Sequence Modeling. Compare the standard Temporal Difference (TD) learning used in CQL with the paradigm shift of Decision Transformers, which treat RL as a conditional sequence generation problem (predicting actions given target returns). Analyze how this shift affects the deadly triad of instability in offline RL."
+  },
+  {
+    "id": 45,
+    "topic": "Multi-Agent Systems (Software Engineering)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2307.07924",
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.08155",
+        "title": "Communicative Agents for Software Development / ChatDev"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.03533",
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+      }
+    ],
+    "prompt": "Create a technical review of LLM-based Multi-Agent systems in software engineering. Analyze the Standard Operating Procedure (SOP) embedded in MetaGPT and ChatDev to coordinate agents (Product Manager, Architect, Engineer). Contrast these agentic frameworks with the evaluation rigor provided by SWE-bench, discussing why agents still struggle with repository-level context."
+  },
+  {
+    "id": 46,
+    "topic": "Machine Unlearning (Privacy & Copyright)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1912.03817",
+        "title": "Machine Unlearning / SISA: Sharded, Isolated, Sliced, Aggregated"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.02238",
+        "title": "Who’s Harry Potter? Approximate Unlearning in LLMs"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.15176",
+        "title": "Unlearning Biases and Copyrighted Content in Large Language Models"
+      }
+    ],
+    "prompt": "Generate a slide deck on the algorithms for Forgetting in AI. Contrast the exact unlearning approach of SISA (retraining on shards) with the approximate unlearning techniques used for LLMs (gradient ascent on specific tokens). Discuss the concept of Model Collapse or performance degradation when aggressive unlearning is applied to foundation models."
+  },
+  {
+    "id": 47,
+    "topic": "Neural Radiance Fields (NeRF / 3D Representation)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2003.08934",
+        "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2201.05989",
+        "title": "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding / Instant NGP"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.04079",
+        "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
+      }
+    ],
+    "prompt": "Analyze the evolution of Neural Scene Representation. Explain the volumetric rendering equation used in the original NeRF and its high computational cost. Contrast this with Instant NGPs hash grid encoding for speed, and finally, 3D Gaussian Splatting, which abandons neural networks during rendering in favor of explicit rasterization, achieving real-time performance."
+  },
+  {
+    "id": 48,
+    "topic": "Evaluation Benchmarks (General Intelligence)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2009.03300",
+        "title": "Measuring Massive Multitask Language Understanding / MMLU"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2206.04615",
+        "title": "Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models / BIG-bench"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.09110",
+        "title": "Holistic Evaluation of Language Models / HELM"
+      }
+    ],
+    "prompt": "Create a critical review of LLM evaluation methodologies. Discuss the limitations of Static Benchmarks like MMLU (data contamination issues). Contrast BIG-benchs focus on emergent tasks with HELMs multi-metric approach, which evaluates not just accuracy, but also bias, toxicity, and calibration across a standardized taxonomy."
+  },
+  {
+    "id": 49,
+    "topic": "Weak-to-Strong Generalization (Superalignment)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2312.09390",
+        "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.03540",
+        "title": "Scalable Oversight: Measuring Policy Scalability / Constitutional AI precursors"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2302.04752",
+        "title": "Discovering Latent Knowledge in Language Models Without Supervision"
+      }
+    ],
+    "prompt": "Generate a presentation on the Superalignment problem. Focus on the OpenAI Weak-to-Strong paper: Explain the methodology of using a small model (weak supervisor) to train a large model, and analyze the PGR (Perfect Generalization Ratio). Discuss whether strong models truly generalize beyond their supervision or simply learn to imitate the errors of the weak supervisor."
+  },
+  {
+    "id": 50,
+    "topic": "Dense Retrieval (Neural Search)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2004.04906",
+        "title": "Dense Passage Retrieval for Open-Domain Question Answering / DPR"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2004.12832",
+        "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2007.00814",
+        "title": "ANCE: Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval"
+      }
+    ],
+    "prompt": "Produce a comparative analysis of Neural Information Retrieval (IR). Contrast the Bi-Encoder architecture of DPR (single vector per document) with the Late Interaction mechanism of ColBERT (matrix of token vectors). Explain the Hard Negative Mining problem addressed by ANCE and its impact on retrieval accuracy."
+  },
+  {
+    "id": 51,
+    "topic": "Vision Transformers (Architectural Variants)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2103.14030",
+        "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2012.12877",
+        "title": "Training data-efficient image transformers & distillation through attention / DeiT"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2102.12122",
+        "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction"
+      }
+    ],
+    "prompt": "Generate a technical report on the adaptation of Transformers for dense vision tasks. Explain how Swin Transformer reintroduced inductive biases (locality) through Shifted Windows to solve the quadratic complexity of global attention. Contrast this with PVT, which reintroduced the Pyramid structure common in CNNs, enabling multi-scale feature maps for detection and segmentation."
+  },
+  {
+    "id": 52,
+    "topic": "Prompt Compression (Efficiency)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2304.03299",
+        "title": "Learning to Compress Prompts with Gist Tokens"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.05736",
+        "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.02527",
+        "title": "Selective Context: Determined by Self-Information for Efficient Prompt Engineering"
+      }
+    ],
+    "prompt": "Analyze techniques for reducing context window usage without losing information. Compare the token-pruning approach of Selective Context (based on self-information/entropy) with the knowledge-distillation approach of LLMLingua (using a small model to compress the prompt). Discuss the trade-off between compression ratio and downstream task accuracy."
+  },
+  {
+    "id": 53,
+    "topic": "Federated Learning with LLMs",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1602.05629",
+        "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data / FedAvg"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2307.15340",
+        "title": "FedLLM: Federated Parameter-Efficient Fine-Tuning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.04948",
+        "title": "Open-Source Large Language Models are Strong Federated Learners"
+      }
+    ],
+    "prompt": "Generate a slide deck on Privacy-Preserving LLM training. Review the foundational FedAvg algorithm. Then, analyze how recent papers (FedLLM) combine Parameter-Efficient Fine-Tuning (like LoRA) with Federated Learning to overcome the communication bottleneck of transmitting massive model weights."
+  },
+  {
+    "id": 54,
+    "topic": "AI for Science (Molecules & Discovery)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2106.05234",
+        "title": "Do Transformers Really Perform Bad for Graph Representation? / Graphormer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2206.01796",
+        "title": "MolGPT: Molecular Generation Using a Transformer-Decoder Model"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.01776",
+        "title": "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking"
+      }
+    ],
+    "prompt": "Create a presentation on the application of Generative AI to Biochemistry. Contrast the sequence-based generation of MolGPT (SMILES strings) with the geometric deep learning approach of DiffDock. Explain how Graphormer modifies the self-attention mechanism to encode graph structural information (centrality, edge distances) effectively."
+  },
+  {
+    "id": 55,
+    "topic": "Image-to-Image Translation (GAN Classics)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1611.07004",
+        "title": "Image-to-Image Translation with Conditional Adversarial Networks / Pix2Pix"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1703.10593",
+        "title": "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks / CycleGAN"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1711.09020",
+        "title": "StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation"
+      }
+    ],
+    "prompt": "Generate a historical review of Image Translation architectures. Focus on the loss functions: Contrast Pix2Pixs requirement for paired data (L1 loss + GAN loss) with CycleGANs Cycle Consistency Loss, which enabled unpaired translation (e.g., horse to zebra). Discuss StarGANs innovation of using a single generator for multi-domain translation."
+  },
+  {
+    "id": 56,
+    "topic": "Bias, Fairness & Ethics",
+    "papers": [
+      {
+        "url": "http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf",
+        "title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+      },
+      {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3442188.3445922",
+        "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2009.11462",
+        "title": "RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models"
+      }
+    ],
+    "prompt": "Create a critical analysis presentation on AI Ethics. Detail the auditing methodology used in Gender Shades to reveal intersectional failure modes. Discuss the environmental and societal risks outlined in Stochastic Parrots, and explain how RealToxicityPrompts quantified the probability of unprompted toxic degeneration in pretrained models."
+  },
+  {
+    "id": 57,
+    "topic": "Neuro-Symbolic AI",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2006.11524",
+        "title": "Neuro-Symbolic Concept Learner"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.11015",
+        "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.10625",
+        "title": "Symbol Tuning Improves In-Context Learning in Language Models"
+      }
+    ],
+    "prompt": "Generate a technical report on the hybridization of Neural Networks and Symbolic Logic. Contrast the Neural Module Network approach (binding specific modules to logical steps) with modern LLM approaches like Chameleon, which uses the LLM as a controller to compose tools. Discuss the Symbol Tuning hypothesis: that tuning on abstract symbols improves the models ability to manipulate ungrounded concepts."
+  },
+  {
+    "id": 58,
+    "topic": "Recommendation Systems (LLM)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1904.06690",
+        "title": "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2203.11014",
+        "title": "P5: Recommendation as Language Processing"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.08845",
+        "title": "LLM-Rec: Personalized Recommendation via Prompting Large Language Models"
+      }
+    ],
+    "prompt": "Analyze the paradigm shift from Matrix Factorization to Language Modeling in RecSys. Compare BERT4Recs Cloze task (predicting the masked item in a sequence) with P5s approach of converting user-item interactions into natural language prompts. Discuss the challenges of Hallucination in recommendations when using generative models."
+  },
+  {
+    "id": 59,
+    "topic": "Curriculum Learning",
+    "papers": [
+      {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/1553374.1553380",
+        "title": "Curriculum Learning / Bengio 2009 - Classic"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2108.02170",
+        "title": "The Power of Scale for Parameter-Efficient Prompt Tuning / Curriculum implications"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.00755",
+        "title": "Skill-It! A Data-Driven Skills Framework for Understanding and Training Language Models"
+      }
+    ],
+    "prompt": "Generate a presentation on Data Ordering strategies. Review the original Curriculum Learning hypothesis (easy-to-hard). Then, analyze modern implementations like Skill-It!, which uses an online ordering algorithm to dynamically balance the training mixture based on the models current skill acquisition, rather than a fixed heuristic."
+  },
+  {
+    "id": 60,
+    "topic": "Cross-Lingual Transfer",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1901.07291",
+        "title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer / LASER"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2004.09813",
+        "title": "mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2112.10668",
+        "title": "Language-Agnostic BERT Sentence Embeddings / LaBSE"
+      }
+    ],
+    "prompt": "Produce a comparative study on Zero-Shot Cross-Lingual Transfer. Contrast the encoder-only embeddings of LaBSE with the encoder-decoder generation of mT5. Discuss the Language-Agnostic property: How do these models map semantically identical sentences from different languages to the same point in vector space without explicit parallel supervision?"
+  },
+  {
+    "id": 61,
+    "topic": "Text-to-Speech (Zero-Shot & Neural Codecs)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1712.05884",
+        "title": "Tacotron 2: Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.02111",
+        "title": "VALL-E: Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2204.14198",
+        "title": "NaturalSpeech: End-to-End Text to Speech Synthesis with Human-Level Quality"
+      }
+    ],
+    "prompt": "Generate a technical presentation on the paradigm shift in TTS. Contrast the traditional Mel-spectrogram pipeline of Tacotron 2 with the Language Modeling approach of VALL-E, which treats audio quantization codes as tokens in a sequence. Analyze how VALL-E achieves zero-shot speaker cloning using only 3 seconds of reference audio without fine-tuning."
+  },
+  {
+    "id": 62,
+    "topic": "Foundation Models for Segmentation",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2304.02643",
+        "title": "Segment Anything / SAM"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.06718",
+        "title": "SEEM: Segment Everything Everywhere All at Once"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.12156",
+        "title": "FastSAM: Fast Segment Anything"
+      }
+    ],
+    "prompt": "Create a comparative analysis of Promptable Segmentation systems. Focus on the Prompt Encoder in SAM: How does it fuse sparse prompts (points, boxes) with dense image embeddings? Contrast SAMs heavy ViT-H backbone with the architectural optimizations in FastSAM (YOLO-based) that allow for real-time inference."
+  },
+  {
+    "id": 63,
+    "topic": "Object Detection (Transformer-based)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2005.12872",
+        "title": "DETR: End-to-End Object Detection with Transformers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2010.04159",
+        "title": "Deformable DETR: Deformable Transformers for End-to-End Object Detection"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2103.00020",
+        "title": "GLIP: Grounded Language-Image Pre-training - Note: Citation for grounding"
+      }
+    ],
+    "prompt": "Generate a slide deck on the removal of Anchor Boxes in Object Detection. Explain the Bipartite Matching Loss (Hungarian algorithm) used in DETR to enforce unique predictions. Compare the global attention mechanism of DETR (slow convergence) with the sparse sampling strategy of Deformable DETR. Finally, discuss how GLIP reformulates detection as a phrase grounding task."
+  },
+  {
+    "id": 64,
+    "topic": "Control & Conditioning (Diffusion)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2302.05543",
+        "title": "Adding Conditional Control to Text-to-Image Diffusion Models / ControlNet"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2302.08453",
+        "title": "T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.07093",
+        "title": "GLIGEN: Open-Set Grounded Text-to-Image Generation"
+      }
+    ],
+    "prompt": "Produce a technical review on spatial controllability in Diffusion Models. Detail the Zero Convolution layer in ControlNet and how it preserves the pre-trained weights of the Stable Diffusion UNet. Contrast this with GLIGEN, which injects grounding information (bounding boxes) directly into the attention layers via Gated Self-Attention."
+  },
+  {
+    "id": 65,
+    "topic": "Tokenization (The Hidden Bottleneck)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1508.07909",
+        "title": "Neural Machine Translation of Rare Words with Subword Units / BPE"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1909.03341",
+        "title": "SentencePiece: A simple and language independent subword tokenizer"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2112.10508",
+        "title": "ByT5: Towards a token-free future with pre-trained byte-to-byte models"
+      }
+    ],
+    "prompt": "Analyze the impact of Tokenization strategies on LLM performance. Review the Byte Pair Encoding (BPE) algorithm. Then, discuss the limitations of tokenization for non-Latin scripts and arithmetic (digit splitting). Contrast standard subword modeling with ByT5s byte-level approach, evaluating the trade-off between sequence length and robustness to noise."
+  },
+  {
+    "id": 66,
+    "topic": "Meta-Learning (Learning to Learn)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1703.03400",
+        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks / MAML"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1703.05175",
+        "title": "Prototypical Networks for Few-shot Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2005.14165",
+        "title": "Language Models are Few-Shot Learners / GPT-3 - Contextualizing Meta-learning"
+      }
+    ],
+    "prompt": "Generate a presentation comparing Gradient-Based vs. Metric-Based Meta-Learning. Explain MAMLs bi-level optimization (optimizing for initial parameters that adapt quickly). Contrast this with Prototypical Networks, which learn a metric space. Discuss whether GPT-3s In-Context Learning renders these explicit meta-learning architectures obsolete or if they address different problems."
+  },
+  {
+    "id": 67,
+    "topic": "Causality in AI",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2102.11107",
+        "title": "Towards Causal Representation Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1904.02098",
+        "title": "CausalWorld: A Robotic Manipulation Benchmark for Causal Structure and Transfer Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.00050",
+        "title": "Causal Reasoning and Large Language Models: Opening a New Frontier for Causality"
+      }
+    ],
+    "prompt": "Create a theoretical report on integrating Causality with Deep Learning. Distinguish between statistical correlation (standard DL) and causal intervention (Do-calculus). Analyze the roadmap for Causal Representation Learning—identifying high-level causal variables from low-level pixel data—and assess current LLMs ability to perform counterfactual reasoning."
+  },
+  {
+    "id": 68,
+    "topic": "Uncertainty Quantification (Hallucination Detection)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1612.01474",
+        "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1506.02142",
+        "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2302.09664",
+        "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in LLMs"
+      }
+    ],
+    "prompt": "Generate a technical slide deck on measuring confidence in Neural Networks. Contrast the computational cost of Deep Ensembles with the efficiency of Monte Carlo Dropout. Crucially, explain Semantic Uncertainty in LLMs: clustering generated samples by meaning rather than exact token match to estimate the true probability of a fact."
+  },
+  {
+    "id": 69,
+    "topic": "Dynamic Neural Networks (Early Exit)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2004.02984",
+        "title": "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1711.02549",
+        "title": "SkipNet: Learning Dynamic Routing in Convolutional Networks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2110.13711",
+        "title": "EarlyBERT: Efficient BERT Training via Early-bird Lottery Tickets"
+      }
+    ],
+    "prompt": "Analyze the trade-off between Efficiency and Depth in Dynamic Networks. Explain the entropy-based criteria used in DeeBERT to terminate inference at intermediate layers for easy samples. Discuss the difficulty of training such non-static computational graphs and how they differ from Mixture-of-Experts."
+  },
+  {
+    "id": 70,
+    "topic": "Open Vocabulary Object Recognition",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2104.13921",
+        "title": "Open-Vocabulary Object Detection via Vision and Language Knowledge Distillation / ViLD"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2205.06230",
+        "title": "OWL-ViT: Simple Open-Vocabulary Object Detection with Vision Transformers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.00785",
+        "title": "EVA: Exploring the Limits of Masked Visual Representation Learning"
+      }
+    ],
+    "prompt": "Generate a presentation on the shift from Closed-Set to Open-Set detection. Explain how aligning region embeddings with text embeddings (CLIP space) allows detecting objects not present in the training data. Compare ViLDs distillation approach with OWL-ViTs end-to-end fine-tuning of a standard ViT architecture."
+  },
+  {
+    "id": 71,
+    "topic": "Differential Privacy in AI",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1607.00133",
+        "title": "Deep Learning with Differential Privacy / DP-SGD"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1610.05755",
+        "title": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data / PATE"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2108.12966",
+        "title": "Large Language Models Can Be Strong Differentially Private Learners"
+      }
+    ],
+    "prompt": "Produce a technical analysis of DP-SGD (Differentially Private Stochastic Gradient Descent). Explain the mechanism of gradient clipping and noise injection. Discuss the privacy-utility trade-off, specifically for LLMs: how much performance is lost when ensuring that the model does not memorize unique training examples?"
+  },
+  {
+    "id": 72,
+    "topic": "Neural ODEs (Continuous Depth)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1806.07366",
+        "title": "Neural Ordinary Differential Equations"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2002.02081",
+        "title": "Discretize-Optimize-Scale: Learning to Solve ODEs with Deep Neural Networks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2009.09457",
+        "title": "Neural Circuit Policies Enabling Auditable Autonomy / Liquid Neural Networks"
+      }
+    ],
+    "prompt": "Generate a theoretical review of Continuous-Depth Models. Explain the core concept: replacing the discrete sequence of layers with an ODE solver. Analyze the advantages in parameter efficiency and irregular time-series handling. Briefly touch upon Liquid Neural Networks and their stability in control tasks."
+  },
+  {
+    "id": 73,
+    "topic": "Protein Design & Folding (Generative Bio)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2206.04119",
+        "title": "ProteinMPNN: Robust deep learning based protein sequence design"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.01216",
+        "title": "De novo design of protein structure and function with RFdiffusion"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2004.03497",
+        "title": "ProGen: Language Modeling for Protein Generation"
+      }
+    ],
+    "prompt": "Create a presentation on the Inverse Folding problem. Contrast the Sequence-based approach of ProGen (treating amino acids as text tokens) with the Structure-based approach of RFdiffusion (using diffusion in 3D coordinate space). Explain how ProteinMPNN solves the problem of finding a sequence that folds into a given backbone structure."
+  },
+  {
+    "id": 74,
+    "topic": "Dataset Distillation",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1811.10959",
+        "title": "Dataset Distillation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2006.05929",
+        "title": "Dataset Condensation with Gradient Matching"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.16773",
+        "title": "Dataset Quantization"
+      }
+    ],
+    "prompt": "Generate a technical report on Synthetic Data Compression. Explain the objective: synthesizing a tiny set of images (e.g., 10 per class) such that a model trained on them matches the performance of the full dataset. Analyze the Gradient Matching technique used to align the training trajectories of the real and synthetic data."
+  },
+  {
+    "id": 75,
+    "topic": "AI Agents (Reasoning & Planning)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2201.11903",
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.03629",
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.03442",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior"
+      }
+    ],
+    "prompt": "Based on these three papers, generate an academic presentation titled The Evolution of LLM Reasoning and Planning. Critically compare the methodological differences between CoT (internal reasoning) and ReAct (reasoning + external tool interaction). Furthermore, analyze how Generative Agents utilize the Memory Stream architecture to synthesize perception, planning, and reflection."
+  },
+  {
+    "id": 76,
+    "topic": "Autonomous Coding Agents",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2310.06770",
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues? - Repeated for context"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2306.14895",
+        "title": "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.12485",
+        "title": "OpenAgents: An Open Platform for Language Agents in the Wild"
+      }
+    ],
+    "prompt": "Analyze the transition from Code Generation (Copilot) to Code Autonomy (Agents). Focus on the Execution Feedback loop: How does InterCode allow the model to run its own code, read the error message, and debug itself? Compare this with the evaluation metrics in SWE-bench which require resolving full repository issues."
+  },
+  {
+    "id": 77,
+    "topic": "Brain-to-Text/Image (BCI)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2209.07162",
+        "title": "Decoding language from the brain with functional magnetic resonance imaging / GPT Brain Decoding"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.06956",
+        "title": "MinD-Vis: Deep Visual Decoding from Brain Activity"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1907.05052",
+        "title": "Real-time decoding of question-and-answer speech dialogue using human cortical activity"
+      }
+    ],
+    "prompt": "Generate a presentation on Neuro-Decoding using Foundation Models. Explain how pre-trained LLMs and Diffusion models are used as priors to decode fMRI/EEG signals. Discuss the mapping between brain voxel activity and the latent space of the generative models (e.g., CLIP space in MinD-Vis)."
+  },
+  {
+    "id": 78,
+    "topic": "Web Agents & Browsing",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2112.09332",
+        "title": "WebGPT: Browser-assisted question-answering with human feedback"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.11854",
+        "title": "Mind2Web: Towards a Generalist Agent for the Web"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2307.12856",
+        "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+      }
+    ],
+    "prompt": "Create a technical analysis of Agents interacting with the DOM (Document Object Model). Contrast WebGPTs text-based search approach with Mind2Webs element-interaction approach (clicking buttons, filling forms). Discuss the evaluation challenges in WebArena regarding functional correctness vs. exact match."
+  },
+  {
+    "id": 79,
+    "topic": "Long-Tail Learning",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1901.05555",
+        "title": "Class-Balanced Loss Based on Effective Number of Samples"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1910.09217",
+        "title": "Decoupling Representation and Classifier for Long-Tailed Recognition"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1905.01278",
+        "title": "Large-Scale Long-Tailed Recognition in an Open World / OLTR"
+      }
+    ],
+    "prompt": "Produce a slide deck on the Imbalance problem in real-world data. Explain the hypothesis that Representation Learning and Classification should be decoupled (i.e., learn features on all data, re-balance only the classifier). Analyze the Effective Number of Samples concept and how it modifies the loss function."
+  },
+  {
+    "id": 80,
+    "topic": "Diffusion for Planning (RL)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2205.09991",
+        "title": "Planning with Diffusion for Flexible Behavior Synthesis / Diffuser"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2211.15657",
+        "title": "Is Conditional Generative Modeling all you need for Decision Making?"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.10677",
+        "title": "Contrastive Prefrence Learning: Learning from Human Feedback without RL"
+      }
+    ],
+    "prompt": "Generate a theoretical review of Trajectory Generation via Diffusion. Contrast standard RL (maximizing scalar reward) with Diffuser (inpainting trajectories). Explain how planning is reformulated as a conditional generation problem, where the condition is the goal state and the generation is the path to get there."
+  },
+  {
+    "id": 81,
+    "topic": "Linear Attention (Efficiency)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2006.04768",
+        "title": "Linformer: Self-Attention with Linear Complexity"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2009.14794",
+        "title": "Rethinking Attention with Performers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2006.16236",
+        "title": "Linear Transformers Are Secretly Fast Weight Programmers"
+      }
+    ],
+    "prompt": "Generate a technical breakdown of Linear Attention mechanisms. Contrast the Low-Rank Approximation method used in Linformer (projecting the N×N matrix) with the Kernel Trick approach used in Performers (random feature maps). Discuss the theoretical connection between Linear Transformers and Fast Weights in RNNs."
+  },
+  {
+    "id": 82,
+    "topic": "World Models (Model-Based RL)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1803.10122",
+        "title": "World Models / Ha & Schmidhuber"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.04104",
+        "title": "Mastering Diverse Domains through World Models / DreamerV3"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.08243",
+        "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture / I-JEPA"
+      }
+    ],
+    "prompt": "Create a presentation on the evolution of Internal World Representations. Compare the VAE-based Hallucination approach of the original World Models with the Discrete Autoencoder approach of DreamerV3. Finally, analyze LeCun’s I-JEPA, focusing on why it predicts in representation space rather than pixel space to avoid sampling inefficiencies."
+  },
+  {
+    "id": 83,
+    "topic": "Document Understanding (Layout Analysis)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1912.13318",
+        "title": "LayoutLM: Pre-training of Text and Layout for Document Image Understanding"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2012.14740",
+        "title": "LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2111.15664",
+        "title": "Donut: Document Understanding Transformer without OCR"
+      }
+    ],
+    "prompt": "Analyze the shift from OCR-dependent to OCR-free architectures. Contrast LayoutLMs strategy of injecting 2D positional embeddings into a BERT backbone with Donuts end-to-end Encoder-Decoder approach. Explain how Donut maps raw document images directly to JSON output without explicit bounding box detection."
+  },
+  {
+    "id": 84,
+    "topic": "Model Merging (Weight Averaging)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2203.05482",
+        "title": "Model Soups: Averaging Weights of Multiple Fine-Tuned Models Improves Accuracy"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2209.04836",
+        "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2212.04089",
+        "title": "Editing Models with Task Arithmetic - Repeated for context of merging"
+      }
+    ],
+    "prompt": "Generate a technical report on Post-Hoc Model Ensembling. Explain the Loss Landscape geometry that allows Model Soups (averaging weights) to find flatter, more robust minima. Contrast this with Git Re-Basin, which addresses the Permutation Symmetry problem—aligning neurons before merging to prevent functional collapse."
+  },
+  {
+    "id": 85,
+    "topic": "Text-to-SQL (Semantic Parsing)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1809.08887",
+        "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1911.04942",
+        "title": "RAT-SQL: Relation-Aware Schema Encoding and Linking for Text-to-SQL Parsers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.09667",
+        "title": "DIN-SQL: Decomposed In-Context Learning of Text-to-SQL"
+      }
+    ],
+    "prompt": "Produce a comparative analysis of Structured Prediction. Contrast the graph-based schema encoding of RAT-SQL (explicitly modeling foreign keys as edges) with the decomposition strategy of DIN-SQL (breaking the query generation into schema linking, classification, and generation steps using GPT-4)."
+  },
+  {
+    "id": 86,
+    "topic": "Sparse Neural Networks (Lottery Tickets)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1803.03635",
+        "title": "The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1911.11134",
+        "title": "RigL: Rigged Lottery - The Winning Tickets are in the Weights"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.00774",
+        "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot"
+      }
+    ],
+    "prompt": "Generate a presentation on Pruning and Sparsity. Explain the Iterative Magnitude Pruning (IMP) used in the original Lottery Ticket Hypothesis. Contrast this with SparseGPT, which uses a second-order (Hessian) approximation to prune large models like 175B GPT in a single pass without retraining."
+  },
+  {
+    "id": 87,
+    "topic": "Physics-Informed Machine Learning (SciML)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1711.10561",
+        "title": "Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems / PINNs"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2010.08895",
+        "title": "Fourier Neural Operator for Parametric Partial Differential Equations"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2202.03370",
+        "title": "FourCastNet: A Global Data-driven High-resolution Weather Model"
+      }
+    ],
+    "prompt": "Create a technical overview of Neural PDE Solvers. Contrast the PINN approach (embedding the PDE residuals directly into the loss function) with the Neural Operator approach (learning the mapping between function spaces in the frequency domain). Discuss the implications for weather forecasting speed (FourCastNet)."
+  },
+  {
+    "id": 88,
+    "topic": "Vision-Language Navigation (Embodied)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1807.06757",
+        "title": "Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1909.01840",
+        "title": "VLN-BERT: A Recurrent Vision-and-Language BERT for Navigation"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2101.10534",
+        "title": "CoW: Clip on Wheels"
+      }
+    ],
+    "prompt": "Analyze the intersection of NLP and Path Planning. Compare the sequence-to-sequence baseline (LSTM-based) with VLN-BERT, which cross-modally attends to visual history and instruction tokens. Explain how CoW leverages the zero-shot capabilities of CLIP to navigate without explicit map-building training."
+  },
+  {
+    "id": 89,
+    "topic": "Code Translation & Transpilation",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2006.03511",
+        "title": "Unsupervised Translation of Programming Languages / TransCoder"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2105.11960",
+        "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.07124",
+        "title": "StarCoder: May the Source Be With You"
+      }
+    ],
+    "prompt": "Generate a presentation on Neural Source-to-Source translation. Focus on the pre-training objectives: Explain how TransCoder adapts Back-Translation (from NMT) to programming languages. Contrast CodeT5s Identifier-Aware denoising objective with StarCoders Fill-in-the-Middle (FIM) capability for context-aware completion."
+  },
+  {
+    "id": 90,
+    "topic": "Generalist Agents (Multi-Task)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2205.06175",
+        "title": "A Generalist Agent / Gato"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.13884",
+        "title": "Decision Transformer - Repeated for Generalist context"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2402.05929",
+        "title": "Genie: Generative Interactive Environments"
+      }
+    ],
+    "prompt": "Create a slide deck on the Single-Weight Generalist hypothesis. Analyze the Gato architecture: How does it serialize diverse modalities (Atari button presses, robot joint torques, text captions) into a unified token stream? Discuss the scaling implications of training a single transformer on hundreds of distinct control and vision tasks."
+  },
+  {
+    "id": 91,
+    "topic": "Neural Codecs (Audio/Video Compression)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2107.03312",
+        "title": "SoundStream: An End-to-End Neural Audio Codec"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2210.13438",
+        "title": "High Fidelity Neural Audio Compression / EnCodec"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2401.10690",
+        "title": "Magika: AI-Powered File Type Identification - Related"
+      }
+    ],
+    "prompt": "Generate a technical report on Vector Quantization (VQ) in signal processing. Explain the Residual Vector Quantization (RVQ) mechanism used in EnCodec to scale bitrate. Contrast standard mp3/aac compression with Neural Codecs, focusing on the trade-off between perceptual quality (reconstructed via GAN discriminators) and bitrate."
+  },
+  {
+    "id": 92,
+    "topic": "Matrix Multiplication (AI for Math)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2210.01739",
+        "title": "Discovering Faster Matrix Multiplication Algorithms with Reinforcement Learning / AlphaTensor"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2312.11014",
+        "title": "Mathematical Discoveries from Program Search with Large Language Models / FunSearch"
+      }
+    ],
+    "prompt": "Analyze the use of AI to discover fundamental algorithms. Explain how AlphaTensor formulated matrix multiplication as a 3D tensor decomposition game played by an RL agent. Contrast this with FunSearch, which uses an LLM to evolve Python code snippets, relying on an evaluator to prevent hallucinations and discover verifiable mathematical bounds."
+  },
+  {
+    "id": 93,
+    "topic": "Open Vocabulary Segmentation (3D/2D)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2112.15206",
+        "title": "OpenSeg: Open-Vocabulary Scene Understanding by Connecting Vision and Language"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2203.02446",
+        "title": "CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2301.09637",
+        "title": "LERF: Language Embedded Radiance Fields"
+      }
+    ],
+    "prompt": "Create a presentation on Language-Embedded Vision. Discuss how LERF renders CLIP embeddings into 3D NeRF fields, allowing users to query \"Where is the coffee mug?\" in 3D space. Contrast this with OpenSegs 2D approach of aligning region masks with text embeddings during training."
+  },
+  {
+    "id": 94,
+    "topic": "Long-Context Forecasting (Transformer Variants)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2012.07436",
+        "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.13008",
+        "title": "Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2305.16637",
+        "title": "PatchTST: A Time Series is Worth 64 Words"
+      }
+    ],
+    "prompt": "Generate a technical review of Time-Series Transformers. Contrast the ProbSparse Attention of Informer with the Series Decomposition (Trend vs. Seasonal) block in Autoformer. Finally, analyze PatchTSTs finding that simple patching (grouping time steps) and channel independence outperform complex attention mechanisms."
+  },
+  {
+    "id": 95,
+    "topic": "Deepfake Detection",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1901.08971",
+        "title": "FaceForensics++: Learning to Detect Manipulated Facial Images"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2004.07676",
+        "title": "Face X-ray for More General Face Forgery Detection"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2304.14419",
+        "title": "Detecting Generated Images by Real-World Propagation"
+      }
+    ],
+    "prompt": "Produce a slide deck on Adversarial Defense in Media. Explain the blending artifacts detected by Face X-ray (finding the boundary between the inserted face and background). Contrast this with frequency-domain analysis methods that look for checkerboard artifacts left by GAN upsampling layers."
+  },
+  {
+    "id": 96,
+    "topic": "Neural Re-ranking (Search)",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1901.04085",
+        "title": "Passage Re-ranking with BERT"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2004.12832",
+        "title": "ColBERT - Repeated for Re-ranking context"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2308.07107",
+        "title": "RankZephyr: Effective and Robust Zero-Shot Listwise Reranking"
+      }
+    ],
+    "prompt": "Analyze the trade-off between Cross-Encoders and Bi-Encoders. Explain why Cross-Encoders (full attention between query and document) are more accurate but slower than Bi-Encoders. Discuss RankZephyrs approach of using LLMs for Listwise ranking (sorting the whole list at once) rather than scoring documents individually."
+  },
+  {
+    "id": 97,
+    "topic": "Human Motion Synthesis",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2012.03094",
+        "title": "ACTOR: Action-Conditioned Transfomer VAE for Human Motion Synthesis"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2209.14916",
+        "title": "Human Motion Diffusion Model / MDM"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2303.01418",
+        "title": "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations"
+      }
+    ],
+    "prompt": "Generate a comparative study on 3D Motion Generation. Contrast the Transformer-VAE approach of ACTOR with the Diffusion-based approach of MDM. Discuss the challenge of foot sliding in generated animations and how T2M-GPT uses VQ-VAE codebooks to ensure realistic kinematic constraints."
+  },
+  {
+    "id": 98,
+    "topic": "Prompt Injection & Attacks",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/2302.12173",
+        "title": "Ignore Previous Prompt: Attack Techniques for Language Models"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2309.10253",
+        "title": "Jailbroken: How Does LLM Safety Training Fail?"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.12815",
+        "title": "Not what youve signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
+      }
+    ],
+    "prompt": "Create a security analysis presentation on Indirect Prompt Injection. Explain the threat model where an LLM processing a webpage (e.g., via RAG) executes hidden instructions in the text. Contrast Competing Objectives (helpfulness vs. safety) as a root cause for jailbreak susceptibility compared to standard software vulnerabilities."
+  },
+  {
+    "id": 99,
+    "topic": "GAN Evolution",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1406.2661",
+        "title": "Generative Adversarial Networks"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1511.06434",
+        "title": "Unsupervised Representation Learning with Deep Convolutional GANs / DCGAN"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1812.04948",
+        "title": "A Style-Based Generator Architecture for GANs / StyleGAN"
+      }
+    ],
+    "prompt": "Based on these three papers, generate an academic presentation on the structural evolution of GANs. Conduct a comparative analysis of the network architecture changes from the original GAN to the convolution-based DCGAN, and finally to the Style-Based Generator (StyleGAN). Ensure every slide features key architectural diagrams highlighting exactly what changed in the Generator and Discriminator designs."
+  },
+  {
+    "id": 100,
+    "topic": "NLP & LLM Architecture",
+    "papers": [
+      {
+        "url": "https://arxiv.org/pdf/1706.03762",
+        "title": "Attention Is All You Need"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1810.04805",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2005.14165",
+        "title": "Language Models are Few-Shot Learners / GPT-3"
+      }
+    ],
+    "prompt": "Based on these three papers, generate a technical presentation regarding the evolutionary branches of the Transformer architecture. Focus on comparing the architectural trade-offs between BERT (Encoder-only) and GPT-3 (Decoder-only), analyzing specifically how they modified the original Transformer components (Attachment 1). Each slide must present clear structural comparison diagrams."
+  }
+]
+```
